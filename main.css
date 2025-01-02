@@ -1,4 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: black;
     color: aliceblue;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+.play {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    padding-top: 2rem;
+}
+
+.greet {
+    width: 600px;
+    height: 100px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.head, .start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start button {
+    width: 200px;
+    height: 200px;
+}
+
+.start {
+    margin-bottom: 6rem;
+}
+
