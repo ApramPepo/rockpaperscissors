@@ -46,3 +46,16 @@ footer {
     margin-bottom: 6rem;
 }
 
+.button {
+    background-color: rgb(98, 215, 245);
+    font-family: cursive;
+    border: 8px sold white;
+    border-radius: 12px;
+    font-size: 48px;
+    box-shadow: 5px 5px 10px rgb(13, 175, 240);
+}
+
+.button:hover {
+    background-color: red;
+    box-shadow: 5px 5px 10px red;
+}
