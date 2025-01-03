@@ -6,14 +6,34 @@ function getComputerChoice() {
   return options[Math.floor(Math.random() * options.length)];
 }
 
-function getHumanChoice() {
-  let humanChoice = prompt("Choose rock, paper or scissors");
-  humanChoice = humanChoice.toLowerCase();
-  if (options.includes(humanChoice)) {
-    return humanChoice;
-  } else {
-    alert("Please choose rock, paper or scissors");
-    return getHumanChoice();
+function updateScore() {
+  document.getElementById('humanScore').textContent = humanScore;
+  document.getElementById('computerScore').textContent = computerScore;
+}
+
+function handleChoice(humanChoice) {
+  const computerChoice = getComputerChoice();
+  const result = playRound(humanChoice, computerChoice);
+  document.getElementById('result').textContent = result;
+  updateScore();
+
+  if (humanScore + computerScore >= 10) {
+    let gameResult;
+    if (humanScore > computerScore) {
+      gameResult = "Game Over - You win the game!";
+    } else if (humanScore < computerScore) {
+      gameResult = "Game Over - You lose the game!";
+    } else {
+      gameResult = "Game Over - It's a tie!";
+    }
+    document.getElementById('result').textContent = gameResult;
+    // Reset scores for new game
+    humanScore = 0;
+    computerScore = 0;
+    setTimeout(() => {
+      updateScore();
+      document.getElementById('result').textContent = "";
+    }, 3000);
   }
 }
 
@@ -33,19 +53,9 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-function playGame() {
-  for (let i = 0; i < 10; i++) {
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
-    console.log(playRound(humanChoice, computerChoice));
-  }
-  if (humanScore > computerScore) {
-    console.log("You win the game!");
-  } else if (humanScore < computerScore) {
-    console.log("You lose the game!");
-  } else {
-    console.log("It's a tie!");
-  }
-}
 
-console.log(playGame());
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('rockBtn').addEventListener('click', () => handleChoice('rock'));
+  document.getElementById('paperBtn').addEventListener('click', () => handleChoice('paper'));
+  document.getElementById('scissorsBtn').addEventListener('click', () => handleChoice('scissors'));
+});

@@ -15,7 +15,7 @@ body {
     flex-direction: column;
 }
 
-.container {
+.game-controls {
     background-color: grey;
     border: 6px grey solid;
     border-radius: 8px;
@@ -24,10 +24,32 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    text-align: center;
 }
 
-input {
+.game-status {
+    background-color: beige;
+    border: 6px grey sold;
+    border-radius: 8px;
+    color: black;
+    padding: 8px;
     text-align: center;
+}
+
+button {
+    background-color: black;
+    color: palegoldenrod;
+    padding: 4rem;
+    margin: 1rem;
+    border-radius: 14px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+}
+
+.status {
+    color: aliceblue;
+    background-color: black;
+    border-radius: 14px;
 }
 
 

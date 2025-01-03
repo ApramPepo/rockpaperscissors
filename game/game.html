@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <head>ROCK, PAPER, SCISSORS!</head>
+    <h1>ROCK, PAPER, SCISSORS!</h1>
 
-    <Section class="container">
-        <div class="player">
-            <input type="text" class="action" placeholder="Rock, Paper, Scissors">
-            <p class="score">0</p>
-        </div>
-        <div class="computer">
-            <input type="text" class="action" placeholder="Rock, Paper, Scissors" readonly>
-            <p class="score">0</p>
-        </div>
-    </Section>
+    <section class="game-controls">
+        <button id="rockBtn">Rock</button>
+        <button id="paperBtn">Paper</button>
+        <button id="scissorsBtn">Scissors</button>
+    </section>
+
+    <div class="game-status">
+        <p class="status">Status</p>
+        <p>You: <span id="humanScore">0</span></p>
+        <p>Comp: <span id="computerScore">0</span></p>
+        <p id="result"></p>
+    </div>
+
 
     <script src="main.js"></script>
 </body>
