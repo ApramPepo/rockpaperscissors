@@ -15,3 +15,20 @@ body {
     flex-direction: column;
 }
 
+.container {
+    background-color: grey;
+    border: 6px grey solid;
+    border-radius: 8px;
+    margin: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+input {
+    text-align: center;
+}
+
+
+
