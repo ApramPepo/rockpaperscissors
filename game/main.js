@@ -17,7 +17,7 @@ function handleChoice(humanChoice) {
   document.getElementById('result').textContent = result;
   updateScore();
 
-  if (humanScore + computerScore >= 10) {
+  if (humanScore + computerScore >= 5) {
     let gameResult;
     if (humanScore > computerScore) {
       gameResult = "Game Over - You win the game!";
